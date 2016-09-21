@@ -118,8 +118,7 @@ if (!argv.e) {
 
 if (command === 'publish' && !argv.d) {
 	console.log(optionsMap.description.describe.warn)
-	yargs.showHelp()
-	return
+	console.log('Replaced with the current time'.warn)
 }
 
 if (command === 'rollback' && !argv.t) {
@@ -136,7 +135,7 @@ var pvc = new Pvc({
 })
 
 if (command === 'publish') {
-	pvc.publish(argv.d)
+	pvc.publish(argv.d || ('version:' + new Date()))
 }
 
 if (command === 'history') {

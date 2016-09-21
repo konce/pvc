@@ -73,18 +73,30 @@ webpack 打包后的页面里面包含css/js的地址和版本hash值, 我们通
 ```
 $ npm install -g page-version-control
 ```
+直接使用命令行的话 就不需要书写调用代码, 直接在与node_modules平级的目录下放置下面这个配置文件即可:
+pvc.config.js
+```
+var path = require('path')
+
+module.exports = {
+  redisPath: path.resolve(__dirname, './redis.json'),
+  htmlPath: path.resolve(__dirname, './dist/index.html'),
+  prefix: 'your custom name'
+}
+
+```
 局部安装
 ```
 $ npm install --save-dev page-version-control
 ```
 
 ## 通过命令行调用
-pvc -h 帮助信息
-pvc -v 当前版本
-pvc publish <e> <d>
-pvc history <e>
-pvc prev <e>
-pvc rollback <e> <t>
+pvc -h 帮助信息 <br>
+pvc -v 当前版本 <br>
+pvc publish <e> <d> <br>
+pvc history <e> <br>
+pvc prev <e> <br>
+pvc rollback <e> <t> <br>
 
 ## 通过API调用
 ### 引入
