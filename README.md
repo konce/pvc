@@ -69,10 +69,22 @@ webpack 打包后的页面里面包含css/js的地址和版本hash值, 我们通
 
 ## 安装
 
+全局安装(可直接使用命令行)
 ```
-$ npm install --save--dev page-version-control
+$ npm install -g page-version-control
+```
+局部安装
+```
+$ npm install --save-dev page-version-control
 ```
 
+## 通过命令行调用
+pvc -h 帮助信息
+pvc -v 当前版本
+pvc publish <e> <d>
+pvc history <e>
+pvc prev <e>
+pvc rollback <e> <t>
 
 ## 通过API调用
 ### 引入
@@ -156,6 +168,5 @@ pvc.exec().then(rs => {
   console.log(rs)
 })
 ```
-## 通过命令行调用(TODO)
 
 
