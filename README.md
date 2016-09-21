@@ -132,7 +132,7 @@ pvc.getCurrentDetail().then(rs => {
 ```
 
 ### 发布版本
-![image](https://github.com/4f2e/pvc/raw/master/assets/publish.png)
+![image](https://github.com/4f2e/pvc/raw/master/assets/pub.png)
 ```js
 // comment参数为必须
 pvc.publish('comment.....')
