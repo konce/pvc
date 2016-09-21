@@ -1,6 +1,6 @@
 {
   "name": "page-version-control",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Page Version Control with redis",
   "repository": {
     "type": "git",
